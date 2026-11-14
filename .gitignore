@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vercel
+
+# Original artwork (optimized copies live in public/images)
+content/photography/*
+content/paintings/*
+!content/**/.gitkeep
+*.tsbuildinfo
