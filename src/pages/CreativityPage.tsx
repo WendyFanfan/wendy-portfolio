@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeft, Instagram } from 'lucide-react'
+import { ArrowLeft, Instagram, MapPin } from 'lucide-react'
 import { paintings as allPaintings } from '../data/paintings'
-import { photoCategories, photos as allPhotos, type PhotoCategory } from '../data/photography'
+import { photoCategories, photoPlaces, photos as allPhotos, type PhotoCategory, type PhotoPlace } from '../data/photography'
 import { identity } from '../data/identity'
 import { socials } from '../data/site'
 import { Navigation, type NavTarget } from '../components/ui/Navigation'
@@ -36,6 +36,16 @@ const withoutPlaceholdersOnceReal = <T extends { placeholder?: unknown }>(list: 
   list.some((x) => !x.placeholder) ? list.filter((x) => !x.placeholder) : list
 const photos = withoutPlaceholdersOnceReal(allPhotos)
 const paintings = withoutPlaceholdersOnceReal(allPaintings)
+const hasRealPhotos = photos.some((p) => !p.placeholder)
+const hasRealPaintings = paintings.some((p) => !p.placeholder)
+/** Once one collection has real work, an empty collection is hidden instead of showing empty frames. */
+const anyReal = hasRealPhotos || hasRealPaintings
+const photosListed = hasRealPhotos || !anyReal
+const paintingsListed = hasRealPaintings || !anyReal
+/** The filter only makes sense when both collections are on the page. */
+const showFilter = photosListed && paintingsListed
+/** Only offer categories that actually have photos (placeholders count until real ones exist). */
+const usedPlaces = (Object.keys(photoPlaces) as PhotoPlace[]).filter((pl) => photos.some((p) => p.place === pl))
 
 export default function CreativityPage() {
   const { t, l } = useI18n()
@@ -43,6 +53,7 @@ export default function CreativityPage() {
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
   const [filter, setFilter] = useState<Filter>('all')
   const [category, setCategory] = useState<PhotoCategory | 'all'>('all')
+  const [place, setPlace] = useState<PhotoPlace | 'all'>('all')
   const [open, setOpen] = useState<Open>(null)
   const [scrolled, setScrolled] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
@@ -56,10 +67,19 @@ export default function CreativityPage() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const visiblePhotos = useMemo(() => (category === 'all' ? photos : photos.filter((p) => p.category === category)), [category])
-  const showPhotos = filter !== 'painting'
-  const showPaintings = filter !== 'photography'
-  const hasPlaceholders = photos.some((p) => p.placeholder) || paintings.some((p) => p.placeholder)
+  const inPlace = useMemo(() => (place === 'all' ? photos : photos.filter((p) => p.place === place)), [place])
+  /** Only offer categories that have photos in the chosen place (placeholders count until real ones exist). */
+  const usedCategories = useMemo(() => photoCategories.filter((cat) => inPlace.some((p) => p.category === cat)), [inPlace])
+  const visiblePhotos = useMemo(() => (category === 'all' ? inPlace : inPlace.filter((p) => p.category === category)), [category, inPlace])
+  const choosePlace = (pl: PhotoPlace | 'all') => {
+    setPlace(pl)
+    // Drop a category that doesn't exist in the new place.
+    const next = pl === 'all' ? photos : photos.filter((p) => p.place === pl)
+    if (category !== 'all' && !next.some((p) => p.category === category)) setCategory('all')
+  }
+  const showPhotos = photosListed && filter !== 'painting'
+  const showPaintings = paintingsListed && filter !== 'photography'
+  const hasPlaceholders = (showPhotos && !hasRealPhotos) || (showPaintings && !hasRealPaintings)
   const realCount = (list: { placeholder?: unknown }[]) => list.filter((x) => !x.placeholder).length
 
   const photoItems = useMemo<LightboxItem[]>(
@@ -92,7 +112,7 @@ export default function CreativityPage() {
         return {
           key: p.id,
           asset: getImage('paintings', p.image),
-          alt: m.title,
+          alt: p.alt ? l(p.alt) : m.title,
           placeholderRatio: p.placeholder?.ratio,
           placeholderLabel: c.paintingSoon,
           content: (
@@ -178,16 +198,18 @@ export default function CreativityPage() {
           </div>
         </header>
 
-        <div className="filter-bar-wrap">
-          <div role="group" aria-label={c.filtersLabel} className="filter-bar">
-            {filters.map((f) => (
-              <button key={f.id} type="button" className="filter-bar__btn" aria-pressed={filter === f.id} onClick={() => setFilter(f.id)}>
-                {f.label}
-                {f.count > 0 && <span className="filter-bar__count">{f.count}</span>}
-              </button>
-            ))}
+        {showFilter && (
+          <div className="filter-bar-wrap">
+            <div role="group" aria-label={c.filtersLabel} className="filter-bar">
+              {filters.map((f) => (
+                <button key={f.id} type="button" className="filter-bar__btn" aria-pressed={filter === f.id} onClick={() => setFilter(f.id)}>
+                  {f.label}
+                  {f.count > 0 && <span className="filter-bar__count">{f.count}</span>}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {hasPlaceholders && <p className="placeholder-note">{c.placeholderNote}</p>}
 
@@ -197,12 +219,24 @@ export default function CreativityPage() {
               <h2 id="photo-heading" className="gallery-section__title">
                 {c.photography}
               </h2>
-              <div role="group" aria-label={c.category} className="chip-row">
-                {(['all', ...photoCategories] as const).map((cat) => (
-                  <button key={cat} type="button" className="chip" aria-pressed={category === cat} onClick={() => setCategory(cat)}>
-                    {cat === 'all' ? c.allMoments : c.categories[cat]}
-                  </button>
-                ))}
+              <div className="chip-filters">
+                {usedPlaces.length > 1 && (
+                  <div role="group" aria-label={c.place} className="chip-row">
+                    <MapPin size={14} className="chip-row__icon" aria-hidden />
+                    {(['all', ...usedPlaces] as const).map((pl) => (
+                      <button key={pl} type="button" className="chip" aria-pressed={place === pl} onClick={() => choosePlace(pl)}>
+                        {pl === 'all' ? c.allPlaces : l(photoPlaces[pl])}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                <div role="group" aria-label={c.category} className="chip-row">
+                  {(['all', ...usedCategories] as const).map((cat) => (
+                    <button key={cat} type="button" className="chip" aria-pressed={category === cat} onClick={() => setCategory(cat)}>
+                      {cat === 'all' ? c.allMoments : c.categories[cat]}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
             <PhotoGallery photos={visiblePhotos} onOpen={(index) => setOpen({ kind: 'photo', index })} />

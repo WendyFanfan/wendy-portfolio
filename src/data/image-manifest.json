@@ -1,1 +1,1375 @@
-{}
+{
+  "paintings/autumn-cottage": {
+    "width": 1300,
+    "height": 1823,
+    "color": "#f8e8b8",
+    "widths": [
+      480,
+      960,
+      1300
+    ]
+  },
+  "paintings/birch-forest": {
+    "width": 3314,
+    "height": 4191,
+    "color": "#989898",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/blossom-house": {
+    "width": 4118,
+    "height": 5491,
+    "color": "#d8d8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/blue-wave": {
+    "width": 1662,
+    "height": 1298,
+    "color": "#98a8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      1662
+    ]
+  },
+  "paintings/blueberries": {
+    "width": 1027,
+    "height": 1046,
+    "color": "#f8e8b8",
+    "widths": [
+      480,
+      960,
+      1027
+    ]
+  },
+  "paintings/bunny": {
+    "width": 878,
+    "height": 1204,
+    "color": "#f8f8e8",
+    "widths": [
+      480,
+      878
+    ]
+  },
+  "paintings/cherries-rain": {
+    "width": 831,
+    "height": 1206,
+    "color": "#b8b8b8",
+    "widths": [
+      480,
+      831
+    ]
+  },
+  "paintings/cliff-by-the-sea": {
+    "width": 1096,
+    "height": 893,
+    "color": "#989898",
+    "widths": [
+      480,
+      960,
+      1096
+    ]
+  },
+  "paintings/golden-mountain": {
+    "width": 1100,
+    "height": 1298,
+    "color": "#d8d8d8",
+    "widths": [
+      480,
+      960,
+      1100
+    ]
+  },
+  "paintings/green-valley": {
+    "width": 1018,
+    "height": 1306,
+    "color": "#385878",
+    "widths": [
+      480,
+      960,
+      1018
+    ]
+  },
+  "paintings/koi-and-lotus": {
+    "width": 922,
+    "height": 1398,
+    "color": "#182828",
+    "widths": [
+      480,
+      922
+    ]
+  },
+  "paintings/lavender-clouds": {
+    "width": 1279,
+    "height": 1585,
+    "color": "#b8b8d8",
+    "widths": [
+      480,
+      960,
+      1279
+    ]
+  },
+  "paintings/lavender-field": {
+    "width": 3668,
+    "height": 2560,
+    "color": "#d8d8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/meadow-cottage": {
+    "width": 1660,
+    "height": 1292,
+    "color": "#b8b8a8",
+    "widths": [
+      480,
+      960,
+      1600,
+      1660
+    ]
+  },
+  "paintings/meadow-triptych": {
+    "width": 860,
+    "height": 1199,
+    "color": "#d8c8b8",
+    "widths": [
+      480,
+      860
+    ]
+  },
+  "paintings/misty-lake": {
+    "width": 1170,
+    "height": 975,
+    "color": "#b8b8b8",
+    "widths": [
+      480,
+      960,
+      1170
+    ]
+  },
+  "paintings/mountain-lake": {
+    "width": 4075,
+    "height": 4834,
+    "color": "#f8d808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/night-sky": {
+    "width": 3442,
+    "height": 4883,
+    "color": "#382818",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/panda": {
+    "width": 2962,
+    "height": 4107,
+    "color": "#c8b8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/peach-blossom": {
+    "width": 1852,
+    "height": 1424,
+    "color": "#c8c8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      1852
+    ]
+  },
+  "paintings/poppy-landscape": {
+    "width": 942,
+    "height": 1320,
+    "color": "#a8b8b8",
+    "widths": [
+      480,
+      942
+    ]
+  },
+  "paintings/seascape": {
+    "width": 4820,
+    "height": 3388,
+    "color": "#382828",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/shooting-star": {
+    "width": 3040,
+    "height": 2723,
+    "color": "#084898",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/sketch-weixdorf-pond": {
+    "width": 5351,
+    "height": 3643,
+    "color": "#b8b8a8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/sketch-weixdorf-road": {
+    "width": 4530,
+    "height": 3248,
+    "color": "#b8b8a8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/small-studies": {
+    "width": 1503,
+    "height": 1125,
+    "color": "#c8d8e8",
+    "widths": [
+      480,
+      960,
+      1503
+    ]
+  },
+  "paintings/snow-cabin": {
+    "width": 1308,
+    "height": 1671,
+    "color": "#283858",
+    "widths": [
+      480,
+      960,
+      1308
+    ]
+  },
+  "paintings/snow-peak-blossom": {
+    "width": 1964,
+    "height": 1431,
+    "color": "#d8c8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      1964
+    ]
+  },
+  "paintings/sunset-lake": {
+    "width": 2106,
+    "height": 1654,
+    "color": "#a8a8a8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2106
+    ]
+  },
+  "paintings/sunset-waves": {
+    "width": 4403,
+    "height": 3430,
+    "color": "#a8a8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/tree-by-the-lake": {
+    "width": 3831,
+    "height": 3843,
+    "color": "#b8b8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "paintings/whale": {
+    "width": 3430,
+    "height": 4412,
+    "color": "#98a8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-01": {
+    "width": 3874,
+    "height": 5811,
+    "color": "#3878b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-02": {
+    "width": 3874,
+    "height": 5811,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-03": {
+    "width": 3371,
+    "height": 5056,
+    "color": "#88b8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-04": {
+    "width": 3011,
+    "height": 4743,
+    "color": "#d8d8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-05": {
+    "width": 3842,
+    "height": 5763,
+    "color": "#a8b8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-06": {
+    "width": 5693,
+    "height": 3795,
+    "color": "#a8b8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-07": {
+    "width": 3923,
+    "height": 5885,
+    "color": "#98a8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-08": {
+    "width": 3866,
+    "height": 5799,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-09": {
+    "width": 3706,
+    "height": 5559,
+    "color": "#78a8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-10": {
+    "width": 3915,
+    "height": 5873,
+    "color": "#c8d8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/budapest-11": {
+    "width": 1179,
+    "height": 1570,
+    "color": "#d88838",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/budapest-12": {
+    "width": 1440,
+    "height": 1915,
+    "color": "#c8c8e8",
+    "widths": [
+      480,
+      960,
+      1440
+    ]
+  },
+  "photography/budapest-13": {
+    "width": 1179,
+    "height": 1748,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/budapest-14": {
+    "width": 1179,
+    "height": 1962,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/budapest-15": {
+    "width": 1179,
+    "height": 1977,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-01": {
+    "width": 1179,
+    "height": 1951,
+    "color": "#5888b8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-02": {
+    "width": 1179,
+    "height": 1926,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-03": {
+    "width": 1179,
+    "height": 1926,
+    "color": "#282838",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-04": {
+    "width": 1179,
+    "height": 2023,
+    "color": "#081828",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-05": {
+    "width": 1179,
+    "height": 1931,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-06": {
+    "width": 1179,
+    "height": 1926,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-08": {
+    "width": 1179,
+    "height": 1721,
+    "color": "#48a8d8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-09": {
+    "width": 1179,
+    "height": 1721,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-10": {
+    "width": 1179,
+    "height": 1728,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-11": {
+    "width": 1179,
+    "height": 1742,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-12": {
+    "width": 1179,
+    "height": 1721,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-13": {
+    "width": 1179,
+    "height": 1735,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-14": {
+    "width": 1179,
+    "height": 1732,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-15": {
+    "width": 1179,
+    "height": 1708,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-16": {
+    "width": 1179,
+    "height": 1745,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-17": {
+    "width": 1179,
+    "height": 1708,
+    "color": "#181818",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-18": {
+    "width": 1179,
+    "height": 1742,
+    "color": "#181818",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-19": {
+    "width": 1179,
+    "height": 1745,
+    "color": "#f8f8f8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-20": {
+    "width": 1179,
+    "height": 1718,
+    "color": "#f8f8f8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-21": {
+    "width": 1179,
+    "height": 1590,
+    "color": "#78a8d8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-22": {
+    "width": 1179,
+    "height": 1752,
+    "color": "#f8f8f8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-23": {
+    "width": 1179,
+    "height": 1728,
+    "color": "#888888",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-24": {
+    "width": 1179,
+    "height": 1742,
+    "color": "#283848",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-25": {
+    "width": 1179,
+    "height": 1728,
+    "color": "#788898",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/chengdu-26": {
+    "width": 1179,
+    "height": 1698,
+    "color": "#182838",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/dresden-altstadt-01": {
+    "width": 5935,
+    "height": 3957,
+    "color": "#e8e8e8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-02": {
+    "width": 3699,
+    "height": 5549,
+    "color": "#e8e8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-03": {
+    "width": 3194,
+    "height": 4731,
+    "color": "#b8b8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-04": {
+    "width": 3047,
+    "height": 4788,
+    "color": "#080818",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-05": {
+    "width": 3773,
+    "height": 5659,
+    "color": "#080828",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-06": {
+    "width": 3965,
+    "height": 5948,
+    "color": "#b8b8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-07": {
+    "width": 3842,
+    "height": 5763,
+    "color": "#181828",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-08": {
+    "width": 3803,
+    "height": 5354,
+    "color": "#c8c8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-09": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#d8d8e8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-10": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#a8b8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-11": {
+    "width": 3842,
+    "height": 5763,
+    "color": "#c8c8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-12": {
+    "width": 3827,
+    "height": 5740,
+    "color": "#c8c8d8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-13": {
+    "width": 3904,
+    "height": 5464,
+    "color": "#485868",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-14": {
+    "width": 3657,
+    "height": 5393,
+    "color": "#283848",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-16": {
+    "width": 3805,
+    "height": 5710,
+    "color": "#b8b8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/dresden-altstadt-17": {
+    "width": 3678,
+    "height": 5517,
+    "color": "#080818",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-01": {
+    "width": 3487,
+    "height": 5230,
+    "color": "#b8b8b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-02": {
+    "width": 2542,
+    "height": 3812,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-03": {
+    "width": 2667,
+    "height": 4000,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-04": {
+    "width": 3008,
+    "height": 3008,
+    "color": "#081828",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-05": {
+    "width": 2158,
+    "height": 3241,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2158
+    ]
+  },
+  "photography/everyday-06": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#c8d8e8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-07": {
+    "width": 5728,
+    "height": 3819,
+    "color": "#7898b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-08": {
+    "width": 5787,
+    "height": 3858,
+    "color": "#7898b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-09": {
+    "width": 2400,
+    "height": 1600,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/everyday-10": {
+    "width": 1179,
+    "height": 1457,
+    "color": "#080808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/everyday-11": {
+    "width": 1179,
+    "height": 1412,
+    "color": "#081808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/everyday-12": {
+    "width": 1179,
+    "height": 1546,
+    "color": "#485868",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/everyday-13": {
+    "width": 1179,
+    "height": 1548,
+    "color": "#382808",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/everyday-14": {
+    "width": 1510,
+    "height": 2398,
+    "color": "#98a8b8",
+    "widths": [
+      480,
+      960,
+      1510
+    ]
+  },
+  "photography/everyday-15": {
+    "width": 1444,
+    "height": 1926,
+    "color": "#5888c8",
+    "widths": [
+      480,
+      960,
+      1444
+    ]
+  },
+  "photography/moritzburg-01": {
+    "width": 1440,
+    "height": 2160,
+    "color": "#6898c8",
+    "widths": [
+      480,
+      960,
+      1440
+    ]
+  },
+  "photography/moritzburg-02": {
+    "width": 1440,
+    "height": 960,
+    "color": "#b8c8d8",
+    "widths": [
+      480,
+      960,
+      1440
+    ]
+  },
+  "photography/moritzburg-03": {
+    "width": 1179,
+    "height": 1766,
+    "color": "#88b8e8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/moritzburg-04": {
+    "width": 1179,
+    "height": 1739,
+    "color": "#4888d8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/munich-01": {
+    "width": 5153,
+    "height": 3432,
+    "color": "#0888c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-02": {
+    "width": 3423,
+    "height": 5134,
+    "color": "#081838",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-03": {
+    "width": 3165,
+    "height": 5580,
+    "color": "#080818",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-04": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#98a8c8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-05": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#d8e8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-06": {
+    "width": 5625,
+    "height": 3750,
+    "color": "#b8d8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-07": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#e8f8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-08": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#e8f8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-09": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#e8f8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-10": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#e8f8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-11": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#283848",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-12": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#88b8f8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-13": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#4898e8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-14": {
+    "width": 6000,
+    "height": 4000,
+    "color": "#181808",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/munich-15": {
+    "width": 4000,
+    "height": 6000,
+    "color": "#3878b8",
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ]
+  },
+  "photography/saxon-switzerland-01": {
+    "width": 1179,
+    "height": 1531,
+    "color": "#383838",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-02": {
+    "width": 1179,
+    "height": 1553,
+    "color": "#181818",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-03": {
+    "width": 1179,
+    "height": 1550,
+    "color": "#282828",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-04": {
+    "width": 1179,
+    "height": 1541,
+    "color": "#d8d8e8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-05": {
+    "width": 1179,
+    "height": 1548,
+    "color": "#a8a8a8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-06": {
+    "width": 1179,
+    "height": 865,
+    "color": "#9898a8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-07": {
+    "width": 1179,
+    "height": 1546,
+    "color": "#c8d8e8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-08": {
+    "width": 1179,
+    "height": 1545,
+    "color": "#f8f8f8",
+    "widths": [
+      480,
+      960,
+      1179
+    ]
+  },
+  "photography/saxon-switzerland-09": {
+    "width": 1080,
+    "height": 1810,
+    "color": "#f8f8f8",
+    "widths": [
+      480,
+      960,
+      1080
+    ]
+  }
+}

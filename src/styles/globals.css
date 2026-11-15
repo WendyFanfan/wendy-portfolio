@@ -1498,6 +1498,22 @@ a.contact-link:hover {
   flex-wrap: wrap;
   gap: 0.4rem;
 }
+.chip-row__icon {
+  align-self: center;
+  margin-right: 0.15rem;
+  color: rgba(217, 160, 166, 0.75);
+}
+/* Place row above the category row; right-aligned next to the heading on wide screens. */
+.chip-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+@media (min-width: 768px) {
+  .chip-filters {
+    align-items: flex-end;
+  }
+}
 .chip {
   padding: 0.35rem 0.85rem;
   font-size: 0.76rem;
@@ -1683,6 +1699,7 @@ a.contact-link:hover {
 .painting-wall {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-flow: row dense;
   gap: 4.5rem 3rem;
   align-items: end;
 }
@@ -1690,6 +1707,10 @@ a.contact-link:hover {
   .painting-wall {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 5rem 3.5rem;
+  }
+  /* Landscapes take two columns, so they are not dwarfed by the portraits. */
+  .painting-wall__item--wide {
+    grid-column: span 2;
   }
 }
 @media (min-width: 1100px) {
@@ -1705,8 +1726,8 @@ a.contact-link:hover {
 }
 .painting {
   display: block;
-  /* Never taller than ~56vh, never wider than the column — proportions intact. */
-  width: min(100%, calc(56vh * var(--r)));
+  /* Never taller than ~62vh, never wider than its cell — proportions intact. */
+  width: min(100%, calc(62vh * var(--r)));
   cursor: zoom-in;
   border-radius: 2px;
 }

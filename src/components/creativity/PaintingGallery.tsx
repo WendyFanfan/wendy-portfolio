@@ -15,10 +15,14 @@ export function usePaintingMeta() {
     line: [p.year, p.medium && l(p.medium)].filter(Boolean).join(' · '),
     dimensions: p.dimensions,
     description: p.description ? l(p.description) : undefined,
+    alt: p.alt ? l(p.alt) : undefined,
   })
 }
 
-/** Paintings hung on a warm wall with generous spacing and museum-style labels. */
+/**
+ * Paintings hung on a warm wall with museum-style labels. Landscape works span two columns,
+ * so they are shown about as tall as the portrait works next to them instead of tiny.
+ */
 export function PaintingGallery({ paintings, onOpen }: Props) {
   const { t } = useI18n()
   const meta = usePaintingMeta()
@@ -30,13 +34,16 @@ export function PaintingGallery({ paintings, onOpen }: Props) {
         const asset = getImage('paintings', p.thumbnail ?? p.image)
         const ratio = asset?.ratio ?? p.placeholder?.ratio ?? 0.8
         return (
-          <li key={p.id} className="painting-wall__item">
+          <li
+            key={p.id}
+            className={`painting-wall__item ${ratio > 1.15 ? 'painting-wall__item--wide' : ''}`}
+            style={{ ['--r' as string]: String(ratio) }}
+          >
             <button
               type="button"
               className="painting"
-              style={{ ['--r' as string]: String(ratio) }}
               onClick={() => onOpen(i)}
-              aria-label={`${t.creativity.open}: ${m.title}`}
+              aria-label={`${t.creativity.open}: ${[m.title, m.alt].filter(Boolean).join(' — ')}`}
             >
               <span className="painting__canvas">
                 <ArtImage

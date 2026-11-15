@@ -12,8 +12,9 @@ interface Props {
 export function usePhotoMeta() {
   const { t, l } = useI18n()
   return (p: Photo) => ({
-    title: p.title ? l(p.title) : p.placeholder ? t.creativity.photoSoon : t.creativity.untitled,
-    meta: [p.location && l(p.location), p.year].filter(Boolean).join(' · '),
+    // Without a title the place becomes the label, rather than a row of "Untitled".
+    title: p.title ? l(p.title) : p.placeholder ? t.creativity.photoSoon : p.location ? l(p.location) : t.creativity.untitled,
+    meta: [p.title && p.location && l(p.location), p.year].filter(Boolean).join(' · '),
     category: t.creativity.categories[p.category],
   })
 }

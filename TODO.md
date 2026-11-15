@@ -23,8 +23,10 @@ When an item is done, tick it and move it to **Done** at the bottom.
 
 ## 3. Content
 
-- [ ] 🔴 **Photographs**: put the originals in `content/photography/`, run `npm run images`, add entries in `src/data/photography.ts` (title, location, year, category: travel / landscape / street / everyday).
-- [ ] 🔴 **Oil paintings**: photograph them straight on in even light, put the files in `content/paintings/`, run `npm run images`, add entries in `src/data/paintings.ts` (title, year, medium, dimensions).
+- [ ] 🟢 **More photographs**: put originals in `content/photography/`, run `npm run images`, add entries in `src/data/photography.ts`. Landscape / everyday categories appear automatically once they have photos.
+- [ ] 🟢 Optional titles for the place-labelled photos; year for the Snapshots set (currently labelled by place).
+- [ ] 🟢 Painting medium (oil / acrylic / gouache …) and sizes, if you want them on the labels → `src/data/paintings.ts`.
+- [ ] 🟢 Re-photograph a few paintings straight-on in daylight (lavender field, blossom house, the two pencil sketches look slightly tilted or dim).
 - [ ] 🟡 **Decide the homepage role line**. The site says "Software Engineer · Creative Technologist"; the CV says "Software Engineer · Technical Support & Operations".
 - [ ] 🟡 **Decide whether to show work authorisation**. The CV now says "Residence permit with unrestricted work authorisation"; the site currently doesn't mention it.
 - [ ] 🟡 Have a native speaker read all German text (`src/i18n/ui.ts`, `src/data/*.ts`).
@@ -67,6 +69,19 @@ When an item is done, tick it and move it to **Done** at the bottom.
 
 ## Done
 
+- [x] 2026-11-15 — Pushed & deployed: 32 paintings, 99 photos (Budapest, Moritzburg, Saxon Switzerland, Dresden Old Town, Chengdu, around Munich, Snapshots), place filter, new painting wall
+- [x] 2026-11-15 — 15 everyday snapshots (cats, swans, lake, sky, flowers) added under "Snapshots"
+- [x] 2026-11-15 — 15 photos from around Munich (2025, Bavarian Alps) added with own place filter; removed Chengdu 07
+- [x] 2026-11-15 — 25 Chengdu photos (2024: night views, Jinli after rain, Chunxi Road) added with own place filter
+- [x] 2026-11-15 — Years added: Saxon Switzerland autumn 2025, Dresden Old Town February 2026
+- [x] 2026-11-15 — 16 Dresden Old Town (overcast) photos added with own place filter; one duplicate skipped
+- [x] 2026-11-15 — 9 Saxon Switzerland autumn photos added (category: landscape, own place filter)
+- [x] 2026-11-15 — Place filter for photos (All places · Budapest · Moritzburg); new places: add a key to `photoPlaces` in `src/data/photography.ts`
+- [x] 2026-11-15 — 15 Budapest + 4 Moritzburg photos (2026) added; labelled by place; empty categories hidden
+- [x] 2026-11-15 — Re-shot "雪山湖景" (2025) added → 32 paintings
+- [x] 2026-11-15 — Titles (EN/DE/ZH) and years added to all 31 paintings
+- [x] 2026-11-15 — Painting wall: tidy 3-column grid, landscape works span two columns (no stagger)
+- [x] 2026-11-15 — 15 paintings added to /creativity; one removed (not mine), dark mountain-lake photo removed, 18 more added → 31 (cropped, rotated, WebP, metadata stripped); empty photo section hidden until real photos exist
 - [x] 2026-11-15 — Pushed and deployed: self-hosted fonts + link preview image + hidden legal pages (commit `368ad10`)
 - [x] 2026-11-15 — Self-hosted fonts (no Google Fonts requests); 1.7 KB subset font for 范佳怡
 - [x] 2026-11-15 — Link preview image `public/og-image.jpg` + Open Graph / Twitter tags

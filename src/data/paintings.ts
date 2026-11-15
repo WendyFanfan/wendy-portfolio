@@ -21,13 +21,54 @@ export interface Painting {
   /** e.g. '40 × 50 cm' */
   dimensions?: string
   description?: Text
+  /** Plain description of what the picture shows (screen readers). Not a title. */
+  alt?: Text
   /** Placeholder only: width / height of the empty canvas. */
   placeholder?: { ratio: number }
 }
 
+/**
+ * Order = order on the page (strongest first). Titles and years are Wendy's own (2026-11-15).
+ * Places come from her inscriptions on the works.
+ */
+/**
+ * Order = order on the page (strongest first). Titles and years are Wendy's own (2026-11-15).
+ * Places come from her inscriptions on the works.
+ */
 export const paintings: Painting[] = [
+  { id: 'lavender-field', image: 'lavender-field', title: { en: 'Purple Lavender', de: 'Lila Lavendel', zh: '紫色薰衣草' }, year: '2022', alt: { en: 'Lavender field under a glowing sunset sky', de: 'Lavendelfeld unter leuchtendem Abendhimmel', zh: '晚霞下的薰衣草田' } },
+  { id: 'night-sky', image: 'night-sky', title: { en: 'The Little Prince', de: 'Der kleine Prinz', zh: '小王子' }, year: '2025', alt: { en: 'A small figure and a fox on a hill beneath a swirling night sky and a large sun', de: 'Kleine Figur mit Fuchs auf einem Hügel unter wirbelndem Nachthimmel', zh: '漩涡星空下，小人和狐狸坐在山丘上' } },
+  { id: 'snow-cabin', image: 'snow-cabin', title: { en: 'Snowy Cottage', de: 'Hütte im Schnee', zh: '雪地茅屋' }, year: '2023', alt: { en: 'Snow-covered cabin with a lit doorway beneath icy mountains at night', de: 'Verschneite Hütte mit erleuchteter Tür unter eisigen Bergen bei Nacht', zh: '雪夜冰山下，亮着灯的小木屋' } },
+  { id: 'sunset-waves', image: 'sunset-waves', title: { en: 'Sunset by the Sea', de: 'Sonnenuntergang am Meer', zh: '海边落日' }, year: '2022', alt: { en: 'Crashing waves under a fiery sunset sky', de: 'Brechende Wellen unter feurigem Abendhimmel', zh: '火烧云下翻涌的海浪' } },
+  { id: 'seascape', image: 'seascape', title: { en: 'Evening Glow by the Sea', de: 'Abendrot am Meer', zh: '海边晚霞' }, year: '2025', alt: { en: 'Waves rolling onto a beach, mountains at sunset in the distance', de: 'Wellen am Strand, Berge im Abendlicht', zh: '海浪拍岸，远处是夕阳下的山' } },
+  { id: 'koi-and-lotus', image: 'koi-and-lotus', title: { en: 'Koi in the Lotus Pond', de: 'Kois im Lotusteich', zh: '荷塘锦鲤' }, year: '2023', alt: { en: 'Koi fish swimming beneath a lotus leaf with pink petals', de: 'Kois unter einem Lotusblatt mit rosa Blütenblättern', zh: '荷叶与粉色花瓣下游动的锦鲤' } },
+  { id: 'golden-mountain', image: 'golden-mountain', title: { en: 'Sunlit Golden Peak', de: 'Goldener Gipfel im Sonnenlicht', zh: '日照金山' }, year: '2024', alt: { en: 'Sunlit mountain peak above a forest and a winding stream', de: 'Sonnenbeschienener Berggipfel über Wald und Bach', zh: '阳光照耀的雪山、森林与溪流' } },
+  { id: 'snow-peak-blossom', image: 'snow-peak-blossom', title: { en: 'Mount Fuji', de: 'Fuji', zh: '富士山' }, year: '2024', alt: { en: 'Snow-capped volcano behind cherry blossoms and a purple flower field', de: 'Schneebedeckter Vulkan hinter Kirschblüten und lila Blumenfeld', zh: '樱花与紫色花田后的雪山' } },
+  { id: 'mountain-lake', image: 'mountain-lake', title: { en: 'Snowy Mountain Lake', de: 'Bergsee vor Schneegipfeln', zh: '雪山湖景' }, year: '2025', alt: { en: 'Mountain lake beneath snowy peaks, with a yellow meadow and red wildflowers', de: 'Bergsee unter Schneegipfeln mit gelber Wiese und roten Wildblumen', zh: '雪山下的湖泊、黄色草地与红色野花' } },
+  { id: 'blossom-house', image: 'blossom-house', title: { en: 'Spring Café in Germany', de: 'Frühlingscafé in Deutschland', zh: '德国春日咖啡店' }, year: '2026', alt: { en: 'Stone tower house with a pink blossoming tree', de: 'Steinhaus mit Turm und rosa blühendem Baum', zh: '开满粉色花树的石头塔楼小屋' } },
+  { id: 'autumn-cottage', image: 'autumn-cottage', title: { en: 'Autumn Scenery', de: 'Herbstlandschaft', zh: '秋日景色' }, year: '2026', alt: { en: 'Yellow storybook cottage with a pumpkin and an autumn path', de: 'Gelbes Märchenhaus mit Kürbis und herbstlichem Weg', zh: '南瓜与秋日小路旁的黄色童话小屋' } },
+  { id: 'whale', image: 'whale', title: { en: 'Whale', de: 'Wal', zh: '鲸鱼' }, year: '2024', alt: { en: 'A whale diving through blue water', de: 'Ein Wal, der durch blaues Wasser taucht', zh: '在蓝色海水中下潜的鲸鱼' } },
+  { id: 'lavender-clouds', image: 'lavender-clouds', title: { en: 'Purple Lavender', de: 'Lila Lavendel', zh: '紫色薰衣草' }, year: '2023', alt: { en: 'Lavender field under dramatic clouds', de: 'Lavendelfeld unter dramatischen Wolken', zh: '翻涌云层下的薰衣草田' } },
+  { id: 'peach-blossom', image: 'peach-blossom', title: { en: 'Peach Grove', de: 'Pfirsichhain', zh: '桃林' }, year: '2023', alt: { en: 'Pink blossoming trees on a rocky island before misty green mountains', de: 'Rosa blühende Bäume auf einer Felsinsel vor nebligen grünen Bergen', zh: '雾中青山前，石岛上的桃花树' } },
+  { id: 'blue-wave', image: 'blue-wave', title: { en: 'Waves', de: 'Wellen', zh: '海浪' }, year: '2024', alt: { en: 'A large blue wave breaking towards the shore', de: 'Große blaue Welle, die sich zum Ufer bricht', zh: '涌向岸边的蓝色巨浪' } },
+  { id: 'tree-by-the-lake', image: 'tree-by-the-lake', title: { en: 'Tree by the Lake', de: 'Baum am See', zh: '湖边大树' }, year: '2026', alt: { en: 'Golden-leafed tree by a calm lake with distant hills', de: 'Baum mit goldenem Laub an einem ruhigen See', zh: '湖边金色树叶的大树与远山' } },
+  { id: 'shooting-star', image: 'shooting-star', title: { en: 'Fireworks', de: 'Feuerwerk', zh: '烟火' }, year: '2021', alt: { en: 'Fireworks bursting in a deep blue night sky', de: 'Feuerwerk am tiefblauen Nachthimmel', zh: '深蓝夜空中绽放的烟火' } },
+  { id: 'poppy-landscape', image: 'poppy-landscape', title: { en: 'Sea of Spring Flowers', de: 'Blütenmeer im Frühling', zh: '春日花海' }, year: '2024', alt: { en: 'Rolling countryside with a river and a field of red poppies', de: 'Hügellandschaft mit Fluss und rotem Mohnfeld', zh: '河流蜿蜒的田园与红色罂粟花田' } },
+  { id: 'meadow-cottage', image: 'meadow-cottage', title: { en: 'Rapeseed in Bloom', de: 'Rapsblüte', zh: '油菜花' }, year: '2023', alt: { en: 'Path through a field of yellow rapeseed to a small white cottage', de: 'Weg durch ein gelbes Rapsfeld zu einem kleinen weißen Haus', zh: '穿过油菜花田通往白色小屋的小路' } },
+  { id: 'green-valley', image: 'green-valley', title: { en: 'Spring Meadow and Distant Mountains', de: 'Frühlingswiese und ferne Berge', zh: '春日草坪和远山' }, year: '2024', alt: { en: 'Path winding through a green valley towards mountains under clouds', de: 'Weg durch ein grünes Tal zu Bergen unter Wolken', zh: '穿过绿色山谷通向远山的小路' } },
+  { id: 'cliff-by-the-sea', image: 'cliff-by-the-sea', title: { en: 'Gazing at the Sea', de: 'Blick aufs Meer', zh: '观海' }, year: '2022', alt: { en: 'A figure sitting on a cliff with a bare tree, looking out to sea', de: 'Figur auf einer Klippe mit kahlem Baum, Blick aufs Meer', zh: '坐在海边悬崖枯树下眺望大海的人' } },
+  { id: 'sunset-lake', image: 'sunset-lake', title: { en: 'Afterglow', de: 'Abendrot', zh: '晚霞' }, year: '2023', alt: { en: 'Pastel sunset over a lake with dark hills and birds', de: 'Pastellfarbener Sonnenuntergang über einem See mit Vögeln', zh: '粉彩晚霞下的湖面、远山与飞鸟' } },
+  { id: 'misty-lake', image: 'misty-lake', title: { en: 'Swallows in the Rain', de: 'Schwalben im Regen', zh: '雨中燕子' }, year: '2021', alt: { en: 'Swallows flying over a misty lake with a willow and a pavilion pier', de: 'Schwalben über einem nebligen See mit Weide und Pavillon-Steg', zh: '烟雨湖面上飞过的燕子、柳树与亭子栈桥' } },
+  { id: 'birch-forest', image: 'birch-forest', title: { en: 'Winter Birches', de: 'Winterbirken', zh: '冬日白桦树' }, year: '2022', alt: { en: 'Birch trees in a snowy winter forest', de: 'Birken in einem verschneiten Winterwald', zh: '雪中的白桦林' } },
+  { id: 'cherries-rain', image: 'cherries-rain', title: { en: 'Cherries in the Rain', de: 'Kirschen im Regen', zh: '雨中樱桃' }, year: '2025', alt: { en: 'Three cherries in the rain above rippling water', de: 'Drei Kirschen im Regen über Wasserringen', zh: '雨中的三颗樱桃与水面涟漪' } },
+  { id: 'blueberries', image: 'blueberries', title: { en: 'Blueberries', de: 'Heidelbeeren', zh: '蓝莓' }, year: '2026', alt: { en: 'Three blueberries with a leaf on a pale yellow background', de: 'Drei Heidelbeeren mit Blatt auf hellgelbem Grund', zh: '浅黄底色上的三颗蓝莓' } },
+  { id: 'panda', image: 'panda', title: { en: 'Cute Panda', de: 'Süßer Panda', zh: '可爱大熊猫' }, year: '2026', alt: { en: 'Smiling panda holding bamboo', de: 'Lächelnder Panda mit Bambus', zh: '抱着竹子微笑的熊猫' } },
+  { id: 'bunny', image: 'bunny', title: { en: 'Bunny and Butterfly', de: 'Häschen und Schmetterling', zh: '小兔子和蝴蝶' }, year: '2025', alt: { en: 'Smiling white rabbit in overalls with a butterfly', de: 'Lächelnder weißer Hase in Latzhose mit Schmetterling', zh: '穿背带裤的小白兔和蝴蝶' } },
+  { id: 'meadow-triptych', image: 'meadow-triptych', title: { en: 'Distant Mountains (Series)', de: 'Ferne Berge (Serie)', zh: '远山（组景）' }, year: '2025', alt: { en: 'Three small landscapes: mountains, hills with sheep, a green meadow', de: 'Drei kleine Landschaften: Berge, Hügel mit Schafen, grüne Wiese', zh: '三幅小风景：雪山、羊群山坡、绿色草地' } },
+  { id: 'small-studies', image: 'small-studies', title: { en: 'Postcard Collection', de: 'Postkarten-Sammlung', zh: '明信片合集' }, year: '2024', alt: { en: 'A set of thirteen small studies of sky, sea and coast', de: 'Dreizehn kleine Studien von Himmel, Meer und Küste', zh: '十三张天空、海洋与海岸的小幅习作' } },
+  { id: 'sketch-weixdorf-road', image: 'sketch-weixdorf-road', title: { en: 'Fields of Weixdorf', de: 'Felder in Weixdorf', zh: 'Weixdorf 田野' }, year: '2025', medium: { en: 'Coloured pencil on paper', de: 'Buntstift auf Papier', zh: '纸本彩铅' }, description: { en: 'Weixdorf, Dresden · 21 June 2025', de: 'Weixdorf, Dresden · 21. Juni 2025', zh: '德累斯顿 Weixdorf · 2025 年 6 月 21 日' }, alt: { en: 'Road through a field towards distant hills under a pastel sky', de: 'Weg durch ein Feld zu fernen Hügeln unter pastellfarbenem Himmel', zh: '穿过田野通向远山的小路' } },
+  { id: 'sketch-weixdorf-pond', image: 'sketch-weixdorf-pond', title: { en: 'By the River, Weixdorf', de: 'Am Fluss in Weixdorf', zh: 'Weixdorf 河边' }, year: '2025', medium: { en: 'Coloured pencil on paper', de: 'Buntstift auf Papier', zh: '纸本彩铅' }, description: { en: 'Weixdorf, Dresden · 18 June 2025', de: 'Weixdorf, Dresden · 18. Juni 2025', zh: '德累斯顿 Weixdorf · 2025 年 6 月 18 日' }, alt: { en: 'Willow tree, bench and ducks by a river', de: 'Weide, Bank und Enten am Fluss', zh: '河边的柳树、长椅和鸭子' } },
+
+  // Placeholders are hidden automatically once real paintings exist.
   { id: 'placeholder-painting-1', placeholder: { ratio: 4 / 5 } },
-  { id: 'placeholder-painting-2', placeholder: { ratio: 1 } },
-  { id: 'placeholder-painting-3', placeholder: { ratio: 3 / 4 } },
-  { id: 'placeholder-painting-4', placeholder: { ratio: 5 / 4 } },
 ]
