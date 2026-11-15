@@ -9,8 +9,7 @@ When an item is done, tick it and move it to **Done** at the bottom.
 
 ## 1. Deployment
 
-- [ ] 🔴 **Push the pending changes** (self-hosted fonts and link preview image). Committing and pushing deploys them automatically to Netlify.
-  - After deploying, check the preview card with LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) (`wendyfan.com`).
+- [ ] 🟡 Check the preview card with LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) (enter `wendyfan.com`). This refreshes LinkedIn's cache **before** adding the site to *Featured*.
 
 ## 2. Legal & privacy (Germany)
 
@@ -44,7 +43,12 @@ When an item is done, tick it and move it to **Done** at the bottom.
 
 ## 5. Showcase / job search
 
-- [ ] 🔴 **LinkedIn**: add wendyfan.com to *Featured*, add the project under *Projects*, post it with a short screen recording.
+- [ ] 🔴 **LinkedIn**: add `https://wendyfan.com` in four places:
+  - *Contact info → Website* (type: Portfolio)
+  - *Featured → Add a link* (after the Post Inspector check in 1.)
+  - *Projects* ("wendyfan.com — Interactive 3D Portfolio", with the URL)
+  - last line of *About*: `Portfolio: wendyfan.com`
+  - Then post it with a short screen recording. Check the result via *Resources → View as public*.
 - [ ] 🟡 **XING**: add the website to the profile portfolio.
 - [ ] 🟡 **GitHub**: pin the repo, add a description, the website link and topics (`threejs`, `react-three-fiber`, `portfolio`, `i18n`); create a profile README (`WendyFanfan/WendyFanfan`).
 - [ ] 🟡 Add `wendyfan.com` to the email signature and to job-platform profiles (StepStone, Indeed, Arbeitsagentur).
@@ -63,8 +67,9 @@ When an item is done, tick it and move it to **Done** at the bottom.
 
 ## Done
 
-- [x] 2026-11-15 — Self-hosted fonts (no Google Fonts requests); 1.7 KB subset font for 范佳怡 *(not pushed yet, see 1.)*
-- [x] 2026-11-15 — Link preview image `public/og-image.jpg` + Open Graph / Twitter tags *(not pushed yet)*
+- [x] 2026-11-15 — Pushed and deployed: self-hosted fonts + link preview image + hidden legal pages (commit `368ad10`)
+- [x] 2026-11-15 — Self-hosted fonts (no Google Fonts requests); 1.7 KB subset font for 范佳怡
+- [x] 2026-11-15 — Link preview image `public/og-image.jpg` + Open Graph / Twitter tags
 - [x] 2026-11-15 — Impressum & privacy pages built (`/impressum`, `/datenschutz`); links hidden until the address is filled in
 - [x] 2026-11-15 — Netlify "Powered by Netlify" badge turned off
 - [x] 2026-11-15 — Custom domain wendyfan.com live on Netlify with HTTPS
