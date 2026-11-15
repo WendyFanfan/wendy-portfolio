@@ -6,6 +6,7 @@ import { useI18n } from '../../i18n/I18nProvider'
 import { CvLink } from './CvLink'
 import { PanelShell } from './PanelShell'
 import { Placeholder } from './Placeholder'
+import { LegalLinks } from './LegalLinks'
 
 interface Props {
   side: 'right' | 'bottom'
@@ -97,6 +98,7 @@ export function ContactPanel({ side, onClose, onCvUnavailable, reducedMotion }: 
       <p className="mt-8 text-center text-[0.7rem] tracking-wide text-cream/40">
         © {new Date().getFullYear()} {identity.legal} · {identity.domain}
       </p>
+      <LegalLinks className="mt-2 justify-center" />
     </PanelShell>
   )
 }

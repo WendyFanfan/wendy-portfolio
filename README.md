@@ -47,6 +47,16 @@ The placeholder frames disappear from a collection as soon as it has one real en
 - **Lightbox:** ←/→ to move, Esc to close, swipe on phones, focus trap, and focus returns to the tile you opened.
 - **Reduced motion:** visitors who prefer reduced motion skip the fly-in.
 
+## Privacy, legal pages and fonts (Germany)
+
+- **Fonts are self-hosted:** Fraunces, Manrope and Noto Sans/Serif SC are bundled via `@fontsource`, so the site sends no requests to Google Fonts. On every page, 范佳怡 uses a 1.7 KB subset (`public/fonts/wendy-name-sc.woff2`, SIL OFL). The full Chinese fonts load only when Chinese is selected, and only the slices the page needs.
+- **Imprint and privacy policy:** `/impressum` and `/datenschutz`, with content in `src/data/legal.ts`. German is the binding text; EN/ZH are translations. **Fill in the postal address in `legalContact`.** Update the privacy policy whenever you add analytics, embeds or anything else that processes data. These texts are a template, not legal advice.
+- **No cookies, no tracking.** The only browser storage is the language choice (`localStorage`).
+
+## Link preview image
+
+`public/og-image.jpg` (1200×630) is shown when the site is shared on LinkedIn, WhatsApp, WeChat and similar apps. The design is in `scripts/og/og-image.html` (it uses the site's own fonts). To change it, open that file in Chrome at 1200×630, take a screenshot and save it as `public/og-image.jpg`.
+
 ## Identity system
 
 Every name comes from `src/data/identity.ts`. Never type a name directly into a component.

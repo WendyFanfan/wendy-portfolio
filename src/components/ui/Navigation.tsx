@@ -5,6 +5,7 @@ import { identity } from '../../data/identity'
 import { useI18n } from '../../i18n/I18nProvider'
 import { CvLink } from './CvLink'
 import { LanguageMenu } from './LanguageMenu'
+import { LegalLinks } from './LegalLinks'
 
 export type NavTarget = 'universe' | 'about' | 'projects' | 'photography' | 'contact'
 
@@ -106,6 +107,7 @@ export function Navigation({ active, onNavigate, onCvUnavailable }: Props) {
               iconSize={16}
               className="cv-btn mt-10 self-start px-5 py-3 text-base"
             />
+            <LegalLinks className="absolute bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-8" />
           </motion.div>
         )}
       </AnimatePresence>

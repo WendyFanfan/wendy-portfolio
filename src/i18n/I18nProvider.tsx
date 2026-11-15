@@ -13,17 +13,20 @@ interface I18n {
 
 const I18nContext = createContext<I18n | null>(null)
 
-const CJK_FONTS_ID = 'cjk-fonts'
+let cjkFontsRequested = false
 
-/** Chinese glyphs: load Noto SC on demand (Google serves only the unicode-range slices actually used). */
+/**
+ * Chinese glyphs, self-hosted and loaded only when Chinese is selected. Each weight is split
+ * into ~100 unicode-range slices, so a page downloads only the slices for characters it shows.
+ */
 function ensureCjkFonts() {
-  if (document.getElementById(CJK_FONTS_ID)) return
-  const link = document.createElement('link')
-  link.id = CJK_FONTS_ID
-  link.rel = 'stylesheet'
-  link.href =
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;500&display=swap'
-  document.head.appendChild(link)
+  if (cjkFontsRequested) return
+  cjkFontsRequested = true
+  void Promise.all([
+    import('@fontsource/noto-sans-sc/400.css'),
+    import('@fontsource/noto-sans-sc/500.css'),
+    import('@fontsource/noto-serif-sc/400.css'),
+  ])
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {

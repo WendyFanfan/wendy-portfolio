@@ -81,6 +81,15 @@ const en = {
       'Curiosity is the engine. Right now that means Physical AI — bringing AI into the physical world. Here is what I’m exploring, what I’m learning, and what I plan to build next.',
   },
   credit: `Designed & built by ${legal}`,
+  legal: {
+    imprint: 'Imprint',
+    privacy: 'Privacy',
+    imprintTitle: 'Legal notice',
+    privacyTitle: 'Privacy policy',
+    binding: 'This is a translation for convenience. The German version is legally binding.',
+    updated: 'Last updated',
+    country: 'Germany',
+  },
   creativity: {
     meta: {
       title: `A World of Creativity — Photography & Oil Painting | ${brand}`,
@@ -209,6 +218,15 @@ const de: Dict = {
       'Neugier ist mein Antrieb – derzeit vor allem für Physical AI, also KI in der physischen Welt. Hier steht, was ich erkunde, was ich lerne und was ich als Nächstes bauen möchte.',
   },
   credit: `Gestaltet & entwickelt von ${legal}`,
+  legal: {
+    imprint: 'Impressum',
+    privacy: 'Datenschutz',
+    imprintTitle: 'Impressum',
+    privacyTitle: 'Datenschutzerklärung',
+    binding: '',
+    updated: 'Stand',
+    country: 'Deutschland',
+  },
   creativity: {
     meta: {
       title: `Eine Welt voller Kreativität — Fotografie & Ölmalerei | ${brand}`,
@@ -332,6 +350,15 @@ const zh: Dict = {
     future: '好奇心是我的驱动力——现在，它指向物理 AI：把 AI 带入真实世界。这里记录着我正在探索的方向、正在学习的内容，以及接下来计划做的事。',
   },
   credit: `由 ${chinese}（${legal}）设计与开发`,
+  legal: {
+    imprint: '网站信息',
+    privacy: '隐私政策',
+    imprintTitle: '网站信息',
+    privacyTitle: '隐私政策',
+    binding: '本页为便于阅读的翻译版本，具有法律效力的是德文版本。',
+    updated: '更新于',
+    country: '德国',
+  },
   creativity: {
     meta: {
       title: `创意的世界 — 摄影与油画 | ${brand}`,

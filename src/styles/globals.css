@@ -1,3 +1,13 @@
+/* Only 范 佳 怡 （ ） — subset of Noto Serif SC (SIL OFL 1.1). */
+@font-face {
+  font-family: 'Wendy Name SC';
+  src: url('/fonts/wendy-name-sc.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+8303, U+4F73, U+6021, U+FF08-FF09;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,14 +21,16 @@
   --panel: rgba(30, 25, 38, 0.78);
   --line: rgba(244, 234, 217, 0.1);
   color-scheme: dark;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Manrope Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* 范佳怡 in a matching serif on every page (1.7 KB subset, see public/fonts). */
+  --font-name-zh: 'Wendy Name SC', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
 }
 
 /* Chinese: Latin glyphs keep Fraunces/Manrope, CJK falls through to Noto SC / system fonts. */
 :root:lang(zh) {
-  --font-display: 'Fraunces', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
-  --font-sans: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --font-sans: 'Manrope Variable', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
 }
 /* CJK has no true italic — avoid synthesized slanting, and loosen wide tracking. */
 :lang(zh) em,
@@ -140,7 +152,7 @@
   color: var(--peach);
 }
 .hero-names [lang='zh-CN'] {
-  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  font-family: var(--font-name-zh);
   letter-spacing: 0.12em;
 }
 .hero-role {
@@ -311,7 +323,7 @@
   color: rgba(244, 234, 217, 0.85);
 }
 .sun-card__names [lang='zh-CN'] {
-  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  font-family: var(--font-name-zh);
   color: rgba(244, 234, 217, 0.65);
 }
 .sun-card__tagline {
@@ -1948,4 +1960,125 @@ a.contact-link:hover {
   font-size: 0.88rem;
   line-height: 1.7;
   color: var(--ink-soft);
+}
+
+/* =====================================================================
+   Legal pages (Impressum / Datenschutz) + quiet legal links
+   ===================================================================== */
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+.legal-links a {
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.legal-links--dark {
+  color: rgba(244, 234, 217, 0.42);
+}
+.legal-links--dark a:hover {
+  color: var(--cream);
+  border-color: currentColor;
+}
+.legal-links--paper {
+  color: var(--ink-soft);
+}
+.legal-links--paper a:hover {
+  color: var(--terra-ink);
+  border-color: currentColor;
+}
+
+.legal-page {
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse 60% 35% at 80% 0%, rgba(242, 166, 121, 0.08), transparent 70%),
+    var(--bg);
+}
+.legal-doc {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 8rem 1.25rem 4rem;
+  color: rgba(244, 234, 217, 0.82);
+}
+@media (min-width: 768px) {
+  .legal-doc {
+    padding: 9.5rem 2rem 5rem;
+  }
+}
+.legal-doc__title {
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--cream);
+}
+.legal-doc__binding {
+  margin-top: 1rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(232, 194, 122, 0.9);
+  border-radius: 0.7rem;
+  background: rgba(232, 194, 122, 0.07);
+}
+.legal-doc__intro {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: rgba(244, 234, 217, 0.78);
+}
+:lang(zh) .legal-doc__intro {
+  font-style: normal;
+}
+.legal-doc__section {
+  margin-top: 2.5rem;
+}
+.legal-doc__section h2 {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+.legal-doc__section p,
+.legal-doc__section li {
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+.legal-doc__section p + p,
+.legal-doc__section ul + p,
+.legal-doc__section p + ul {
+  margin-top: 0.75rem;
+}
+.legal-doc__section ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+.legal-doc__section li::marker {
+  color: var(--peach);
+}
+.legal-doc__address {
+  font-style: normal;
+  line-height: 1.75;
+  color: var(--cream);
+}
+.legal-doc__link {
+  color: var(--peach);
+  border-bottom: 1px solid rgba(242, 166, 121, 0.35);
+  overflow-wrap: anywhere;
+}
+.legal-doc__link:hover {
+  border-color: var(--peach);
+}
+.legal-doc__updated {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: rgba(244, 234, 217, 0.45);
 }

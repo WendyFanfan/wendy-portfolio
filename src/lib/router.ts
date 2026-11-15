@@ -6,10 +6,15 @@ import { useEffect, useState } from 'react'
  */
 const EVENT = 'app:navigate'
 
-export type Route = 'home' | 'creativity'
+export type Route = 'home' | 'creativity' | 'impressum' | 'privacy'
 
-export const routeFromPath = (pathname: string): Route =>
-  pathname.replace(/\/+$/, '') === '/creativity' ? 'creativity' : 'home'
+const paths: Record<string, Route> = {
+  '/creativity': 'creativity',
+  '/impressum': 'impressum',
+  '/datenschutz': 'privacy',
+}
+
+export const routeFromPath = (pathname: string): Route => paths[pathname.replace(/\/+$/, '')] ?? 'home'
 
 export function navigate(path: string, { replace = false } = {}) {
   const url = new URL(path, window.location.origin)

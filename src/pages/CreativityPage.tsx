@@ -7,6 +7,7 @@ import { identity } from '../data/identity'
 import { socials } from '../data/site'
 import { Navigation, type NavTarget } from '../components/ui/Navigation'
 import { Toast } from '../components/ui/Toast'
+import { LegalLinks } from '../components/ui/LegalLinks'
 import { SocialIcon } from '../components/ui/SocialIcon'
 import { PhotoGallery, usePhotoMeta } from '../components/creativity/PhotoGallery'
 import { PaintingGallery, usePaintingMeta } from '../components/creativity/PaintingGallery'
@@ -237,6 +238,7 @@ export default function CreativityPage() {
         <p className="creativity-footer__copy">
           © {new Date().getFullYear()} {identity.legal} · {identity.domain}
         </p>
+        <LegalLinks className="mt-2 justify-center" tone={showPaintings ? 'paper' : 'dark'} />
       </footer>
 
       <AnimatePresence>

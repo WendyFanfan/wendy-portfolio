@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { fullNameLine, identity } from '../../data/identity'
 import { planets, type FocusId } from '../../data/planets'
 import { useI18n } from '../../i18n/I18nProvider'
+import { LegalLinks } from './LegalLinks'
 
 interface Props {
   visible: boolean
@@ -87,6 +88,7 @@ export function Instructions({ visible, hoveredId, onHover, onSelect }: Props) {
                 </li>
               ))}
             </ul>
+            <LegalLinks className="mt-1" />
           </motion.nav>
         </>
       )}
